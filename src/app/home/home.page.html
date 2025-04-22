@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ejemplo ion-input</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <!-- input -->
+  <ion-item>
+    <ion-label position="floating">Tu nombre</ion-label>
+    <ion-input [(ngModel)]="nombre" placeholder="Escribe tu nombre..."></ion-input>
+  </ion-item>
+  
+  <p *ngIf="nombre">Hola, {{ nombre }}!</p>
+
+  <!-- toast -->
+  <ion-button id="open-toast" expand="block">Abrir</ion-button>
+  <p id="message">Este es un mensaje que sirve para porbar XD</p>
+  <ion-toast trigger="open-toast" message="Este mensaje dura 5 segundos" [duration]="5000"></ion-toast>
+
+  <!-- radio -->
+  <ion-radio-group value="strawberries">
+    <ion-radio value="grapes">Uvas</ion-radio><br />
+    <ion-radio value="strawberries">Fresas</ion-radio><br />
+    <ion-radio value="pineapple">Piña</ion-radio><br />
+    <ion-radio value="cherries">Manzanas</ion-radio>
+  </ion-radio-group>
+
+  <!-- Checkbox-->
+  <hr>
+  <ion-checkbox labelPlacement="start">Comer vegetales</ion-checkbox>
+
+  <br />
+
+  <ion-checkbox labelPlacement="end">Comer frutas</ion-checkbox>
+
+  <br />
+
+  <ion-checkbox labelPlacement="fixed">Comer Hamburguesa</ion-checkbox>
+
+  <br />
+
+  <ion-checkbox labelPlacement="stacked"></ion-checkbox>
+
+  <!-- Datatime -->
+
+  <hr>
+  <ion-datetime></ion-datetime>
+
+</ion-content>
